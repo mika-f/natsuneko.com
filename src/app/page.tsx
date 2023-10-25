@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col pt-12 mx-8 font-mono">
       <section className="flex container mx-auto items-center w-full pt-12 md:pt-24">
         <div className="xl:w-1/2">
-          <h1 className="uppercase text-5xl md:text-8xl mb-4">
+          <h1 className="uppercase text-4xl md:text-8xl mb-4">
             Boost Your <br /> Productivity
           </h1>
           <div className="text-lg md:text-2xl">
