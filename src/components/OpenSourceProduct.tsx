@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { OpenSourceProduct } from "@/configurations/products";
+import { ExternalLink } from "./ExternalLink";
 
 type Props = {
   product: OpenSourceProduct;
@@ -16,13 +17,7 @@ const OpenSourceProduct: React.FC<Props> = ({ product }) => {
       <div className="text-sm md:text-base">
         <ul className="flex gap-x-6">
           <li>
-            <a
-              href={product.repository}
-              className="dark:text-sky-300 text-sky-600"
-              target="_blank"
-            >
-              GitHub
-            </a>
+            <ExternalLink href={product.repository}>GitHub</ExternalLink>
           </li>
           <li>
             {product.stars} {product.stars > 1 ? "Stars" : "Star"}

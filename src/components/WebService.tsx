@@ -1,6 +1,7 @@
 import React from "react";
 
 import type { WebService as Product } from "@/configurations/products";
+import { ExternalLink } from "./ExternalLink";
 
 type Props = {
   product: Product;
@@ -16,13 +17,7 @@ const WebService: React.FC<Props> = ({ product }) => {
       <div className="text-sm md:text-base">
         <ul className="flex gap-6">
           <li>
-            <a
-              href={product.url}
-              className="dark:text-sky-300 text-sky-600"
-              target="_blank"
-            >
-              Website
-            </a>
+            <ExternalLink href={product.url}>Website</ExternalLink>
           </li>
         </ul>
       </div>

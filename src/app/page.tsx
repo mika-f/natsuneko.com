@@ -11,6 +11,7 @@ import {
   WEB_SERVICES,
 } from "@/configurations/products";
 import { Section } from "@/components/Section";
+import { ExternalLink } from "@/components/ExternalLink";
 
 const getScore = (oss: OpenSourceProduct): number => {
   return oss.stars * 2 + oss.forks;
@@ -75,14 +76,7 @@ export default function Home() {
 
         <ul className="my-4">
           <li>
-            X:{" "}
-            <a
-              href="https://twitter.com/6jz"
-              target="_blank"
-              className="dark:text-sky-300 text-sky-600"
-            >
-              @6jz
-            </a>
+            X: <ExternalLink href="https://twitter.com/6jz">@6jz</ExternalLink>
           </li>
           <li>Discord: natsuneko</li>
         </ul>
