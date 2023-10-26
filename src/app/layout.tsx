@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
 
 import { merge } from "@/utils/clsx";
@@ -6,12 +7,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 import "./globals.css";
+import { WEBSITE_NAME } from "@/configurations/website";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Natsuneko Laboratory",
-  description: "Natsuneko Laboratory website",
+  title: WEBSITE_NAME,
+  description: `${WEBSITE_NAME} website`,
 };
 
 export default function RootLayout({

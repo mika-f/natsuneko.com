@@ -1,12 +1,16 @@
 "use client";
 
+import { Player } from "@lottiefiles/react-lottie-player";
+
+import { OpenSourceProduct } from "@/components/OpenSourceProduct";
+import { ProprietaryProduct } from "@/components/ProprietaryProduct";
+import { WebService } from "@/components/WebService";
 import {
   OSS_PRODUCTS,
-  OpenSourceProduct,
   PRODUCTS,
   WEB_SERVICES,
 } from "@/configurations/products";
-import { Player } from "@lottiefiles/react-lottie-player";
+import { Section } from "@/components/Section";
 
 const getScore = (oss: OpenSourceProduct): number => {
   return oss.stars * 2 + oss.forks;
@@ -38,101 +42,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 mb-8 container mx-auto">
-        <h2 className="text-3xl md:text-5xl mb-8">Open Source Products</h2>
+      <Section title="Open Source Products">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
           {OSS_PRODUCTS.sort((a, b) => getScore(b) - getScore(a)).map((w) => (
-            <div
-              className="flex flex-col gap-y-3 md:gap-y-2"
-              key={w.repository}
-            >
-              <div className="text-xl md:text-3xl whitespace-nowrap overflow-hidden text-ellipsis">
-                {w.title}
-              </div>
-              <div className="text-sm md:text-base">{w.description}</div>
-              <div className="text-sm md:text-base">
-                <ul className="flex gap-x-6">
-                  <li>
-                    <a
-                      href={w.repository}
-                      className="dark:text-sky-300 text-sky-600"
-                      target="_blank"
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    {w.stars} {w.stars > 1 ? "Stars" : "Star"}
-                  </li>
-                  <li>
-                    {w.forks} {w.forks > 1 ? "Forks" : "Fork"}
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <OpenSourceProduct product={w} key={w.repository} />
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="mt-16 mb-8 container mx-auto">
-        <h2 className="text-3xl md:text-5xl mb-8">Proprietary Products</h2>
+      <Section title="Proprietary Products">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
           {PRODUCTS.sort((a, b) => b.likes - a.likes).map((w) => (
-            <div className="flex flex-col gap-y-3 md:gap-y-2" key={w.url}>
-              <div className="text-xl md:text-3xl whitespace-nowrap overflow-hidden text-ellipsis">
-                {w.title}
-              </div>
-              <div className="text-sm md:text-base">{w.description}</div>
-              <div className="text-sm md:text-base">
-                <ul className="flex gap-6">
-                  <li>
-                    <a
-                      href={w.url}
-                      className="dark:text-sky-300 text-sky-600"
-                      target="_blank"
-                    >
-                      Website
-                    </a>
-                  </li>
-                  <li>
-                    {w.likes} {w.likes > 1 ? "Likes" : "Like"}
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ProprietaryProduct key={w.url} product={w} />
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="mt-16 mb-8 container mx-auto">
-        <h2 className="text-3xl md:text-5xl mb-8">Web Services</h2>
+      <Section title="Web Services">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
           {WEB_SERVICES.map((w) => (
-            <div className="flex flex-col gap-y-3 md:gap-y-2" key={w.url}>
-              <div className="text-xl md:text-3xl whitespace-nowrap overflow-hidden text-ellipsis">
-                {w.title}
-              </div>
-              <div className="text-sm md:text-base">{w.description}</div>
-              <div className="text-sm md:text-base">
-                <ul className="flex gap-6">
-                  <li>
-                    <a
-                      href={w.url}
-                      className="dark:text-sky-300 text-sky-600"
-                      target="_blank"
-                    >
-                      Website
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <WebService key={w.url} product={w} />
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="mt-16 mb-8 container mx-auto">
-        <h2 className="text-3xl md:text-5xl mb-8">Contact</h2>
+      <Section title="Contact">
         <p>
           Please feel free to inquire about requests for your productivity
           improvements. If you agree to open the source code after a certain
@@ -152,7 +86,7 @@ export default function Home() {
           </li>
           <li>Discord: natsuneko</li>
         </ul>
-      </section>
+      </Section>
     </div>
   );
 }
