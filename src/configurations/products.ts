@@ -2,24 +2,38 @@ type OpenSourceProduct = {
   title: string;
   description: string;
   repository: string;
+  stars: number;
+  forks: number;
 };
 
 type Product = {
   title: string;
   description: string;
   url: string;
+  likes: number;
 };
 
+type WebService = {
+  title: string;
+  description: string;
+  url: string;
+};
+
+// manually updated at 2023/10/26
 const OSS_PRODUCTS: OpenSourceProduct[] = [
   {
     title: "NekoDraw",
     description: "AI powered Illustration Assistant for CLIP STUDIO PAINT.",
     repository: "https://github.com/mika-f/nekodraw",
+    stars: 114,
+    forks: 6,
   },
   {
     title: "Drag-and-Drop Support",
     description: "Experimental Blender Add-on: Drag and Drop Support",
     repository: "https://github.com/mika-f/blender-drag-and-drop",
+    stars: 186,
+    forks: 5,
   },
   {
     title: "Animation Auto Assignment",
@@ -27,6 +41,8 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       "Unity Editor Extension that tracks changes on hierarchy and automatically repairs animation property paths.",
     repository:
       "https://github.com/natsuneko-laboratory/animation-auto-assignment",
+    stars: 13,
+    forks: 0,
   },
   {
     title: "Refined Animation Property",
@@ -34,12 +50,16 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       "Unity Editor Extension that refine animation property editor.",
     repository:
       "https://github.com/natsuneko-laboratory/refined-animation-property",
+    stars: 10,
+    forks: 0,
   },
   {
     title: "Dairi",
     description:
       "Dairi is a small, simple, and customizable Git LFS Proxy for the Edges. It works on Serverless Edge Platforms such as Cloudflare Workers, Deno, Vercel, AWS Lambda, Lambda@Edge, and Node.js.",
     repository: "https://github.com/natsuneko-laboratory/git-lfs-proxy",
+    stars: 7,
+    forks: 0,
   },
   {
     title: "Animator Controller Tool PostProcessing",
@@ -47,6 +67,8 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       "Rewrite the behavior of AnimatorControllerTool to be the default setting recommended by VRChat.",
     repository:
       "https://github.com/natsuneko-laboratory/animator-controller-tool-post-processing",
+    stars: 6,
+    forks: 0,
   },
   {
     title: "Constraint by Humanoid",
@@ -54,35 +76,94 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       "A Unity editor extension that configures IConstraint component based on Unity Humanoid Rules.",
     repository:
       "https://github.com/natsuneko-laboratory/constraint-by-humanoid",
+    stars: 4,
+    forks: 0,
   },
   {
     title: "create-unitypackage",
     description: "Create UnityPackage without Unity in GitHub Actions",
     repository: "https://github.com/natsuneko-laboratory/create-unitypackage",
+    stars: 3,
+    forks: 0,
   },
   {
     title: "Power Rename",
     description:
       "PowerRename for Unity is Unity editor extension for renaming GameObjects in hierarchy.",
     repository: "https://github.com/natsuneko-laboratory/power-rename",
+    stars: 2,
+    forks: 0,
   },
   {
     title: "Refractions",
     description:
       "The .NET reflection library for .NET Standard 2.0 (for Unity backward compatibles).",
     repository: "https://github.com/natsuneko-laboratory/refractions",
+    stars: 1,
+    forks: 0,
   },
   {
     title: "AssetExplorer",
     description:
       "AssetExplorer is a Unity client implementation of AssetDatabase (assetdatabase.natsuneko.cat). As an editor extension, you can take over Unity's workflow and search for assets.",
     repository: "https://github.com/mika-f/AssetExplorer",
+    stars: 1,
+    forks: 0,
   },
   {
     title: "UStyled",
     description:
       "UStyled: A Utility-First USS Framework for UI Toolkit, inspired by Tailwind CSS.",
     repository: "https://github.com/mika-f/UStyled",
+    stars: 0,
+    forks: 0,
+  },
+  {
+    title: "remark-text-decoration",
+    description:
+      "remark-text-decoration is a remark plugin to add text decoration syntax.",
+    repository: "https://github.com/mika-f/remark-text-decoration",
+    stars: 0,
+    forks: 0,
+  },
+  {
+    title: "Duplicate Name Modifier",
+    description:
+      "Blender add-on for renaming duplicate objects from Object.001 to Object_001.",
+    repository: "https://github.com/mika-f/duplicate-name-modifier",
+    stars: 0,
+    forks: 0,
+  },
+  {
+    title: "Bone Convention Switcher",
+    description:
+      "Blender add-on for switching Blender Bones Naming Conventions between Unity and MMD.",
+    repository: "https://github.com/mika-f/bone-convention-switcher",
+    stars: 0,
+    forks: 0,
+  },
+  {
+    title: "lycoris",
+    description:
+      "lycoris is a state management library inspired by Recoil and Jotai but for Vue.",
+    repository: "https://github.com/mika-f/lycoris",
+    stars: 0,
+    forks: 0,
+  },
+  {
+    title: "nextpida",
+    description:
+      "nextpida is a package that TypeScript friendly apis path generator for Next.js.",
+    repository: "https://github.com/mika-f/nextpida",
+    stars: 1,
+    forks: 0,
+  },
+  {
+    title: "Asset Lens",
+    description: "The fastest Unity asset reference search editor extension",
+    repository: "https://github.com/natsuneko-laboratory/asset-lens",
+    stars: 0,
+    forks: 0,
   },
 ];
 
@@ -92,13 +173,56 @@ const PRODUCTS: Product[] = [
     description:
       "TextMesh Creator is an Blender add-on to create a text mesh from a specified font file.",
     url: "https://docs.natsuneko.cat/en-us/text-mesh-creator/overview/",
+    likes: 113,
   },
   {
     title: "Udon Analyzer",
     description:
       "Roslyn Analyzers for VRChat UdonSharp developers. Report realtime diagnostics in your code such as not exposed API, not supported syntaxes, and best practices for UdonSharp.",
     url: "https://docs.natsuneko.cat/en-us/udon-analyzer/overview/",
+    likes: 77,
+  },
+  {
+    title: "Automatic Material Duplicator",
+    description:
+      "Automatic Material Duplicator is an editor extension for Unity to duplicate materials automatically when you duplicate GameObjects.",
+    url: "https://docs.natsuneko.cat/en-us/automatic-material-duplicator/overview/",
+    likes: 97,
+  },
+  {
+    title: "Material Split View",
+    description:
+      "Material Split View is a Unity editor extension to preview the material with the split view.",
+    url: "https://docs.natsuneko.cat/en-us/material-split-view/",
+    likes: 122,
+  },
+  {
+    title: "FBX Batch Export",
+    description: "Blender Add-on for exporting multiple FBX as batch",
+    url: "https://natsuneko-vrc.booth.pm/items/3853094",
+    likes: 45,
+  },
+  {
+    title: "Particle Live Toolkit - Algo Patcher",
+    description: "Patching hash algorithm for reducing bugs on Unity 2019.",
+    url: "https://natsuneko-vrc.booth.pm/items/4000603",
+    likes: 64,
   },
 ];
 
-export { OSS_PRODUCTS, PRODUCTS };
+const WEB_SERVICES: WebService[] = [
+  {
+    title: "Natsuneko Docs",
+    description: "Documentation Hub for Natsuneko Laboratory Products",
+    url: "https://docs.natsuneko.cat",
+  },
+  {
+    title: "AssetExplorer",
+    description:
+      "AssetExplorer opens the door to a world of Unity packages and assets, where you can effortlessly uncover, search, and delve into a wealth of resources, enabling you to take your Unity projects to new heights with ease and efficiency.",
+    url: "https://assetexplorer.natsuneko.cat",
+  },
+];
+
+export { OSS_PRODUCTS, PRODUCTS, WEB_SERVICES };
+export type { OpenSourceProduct, Product, WebService };
