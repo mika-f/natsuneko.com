@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.font-mono {
+  font-family:
+  /* en */
+  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+  /* ja */
+  "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
