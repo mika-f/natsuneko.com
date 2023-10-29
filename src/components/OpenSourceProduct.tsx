@@ -17,7 +17,9 @@ const OpenSourceProduct: React.FC<Props> = ({ product }) => {
       <div className="text-sm md:text-base">
         <ul className="flex gap-x-6">
           <li>
-            <ExternalLink href={product.repository}>GitHub</ExternalLink>
+            <ExternalLink href={`https://github.com/${product.repository}`}>
+              GitHub
+            </ExternalLink>
           </li>
           <li>
             {product.stars} {product.stars > 1 ? "Stars" : "Star"}
