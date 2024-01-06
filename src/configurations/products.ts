@@ -19,7 +19,7 @@ type WebService = {
   url: string;
 };
 
-// manually updated at 2023/10/26
+// manually updated at 2024/01/07
 const OSS_PRODUCTS: OpenSourceProduct[] = [
   {
     title: "NekoDraw",
@@ -28,7 +28,7 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       ja: "CLIP STUDIO PAINT のための AI イラストアシスタント",
     },
     repository: "mika-f/nekodraw",
-    stars: 114,
+    stars: 119,
     forks: 6,
   },
   {
@@ -38,8 +38,8 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       ja: "Experimental Blender Add-on: Drag and Drop Support",
     },
     repository: "mika-f/blender-drag-and-drop",
-    stars: 186,
-    forks: 5,
+    stars: 218,
+    forks: 6,
   },
   {
     title: "Animation Auto Assignment",
@@ -48,7 +48,7 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       ja: "ヒエラルキーの変更を監視して、アニメーションのプロパティパスを自動修正する Unity エディター拡張",
     },
     repository: "natsuneko-laboratory/animation-auto-assignment",
-    stars: 13,
+    stars: 12,
     forks: 0,
   },
   {
@@ -58,7 +58,7 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       ja: "アニメーションプロパティエディターを改良する Unity エディター拡張",
     },
     repository: "natsuneko-laboratory/refined-animation-property",
-    stars: 10,
+    stars: 11,
     forks: 0,
   },
   {
@@ -69,7 +69,7 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
     },
     repository: "natsuneko-laboratory/git-lfs-proxy",
     stars: 7,
-    forks: 0,
+    forks: 1,
   },
   {
     title: "Animator Controller Tool PostProcessing",
@@ -208,7 +208,7 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
       ja: "オブジェクトを複製した際に、関連付けられた Material も一緒に複製する Unity エディター拡張",
     },
     repository: "natsuneko-laboratory/automatic-material-duplicator",
-    stars: 0,
+    stars: 1,
     forks: 0,
   },
   {
@@ -281,6 +281,16 @@ const OSS_PRODUCTS: OpenSourceProduct[] = [
     stars: 0,
     forks: 0,
   },
+  {
+    title: "Copy Fixed Twitter URL",
+    description: {
+      en: "Add-on for adding new items to Twitter share buttons. This extension adds a 'Copy link as...' button to the share button in Twitter's tweet (post) details.",
+      ja: "Twitter の共有ボタンに新しいアイテムを追加するためのアドオン。この拡張機能は、Twitterのツイート（投稿）詳細の共有ボタンに「リンクを...としてコピー」ボタンを追加します。",
+    },
+    repository: "natsuneko-laboratory/copy-fixed-twitter-url",
+    stars: 0,
+    forks: 0,
+  },
 ];
 
 const PRODUCTS: Product[] = [
@@ -301,6 +311,15 @@ const PRODUCTS: Product[] = [
     },
     url: "https://docs.natsuneko.cat/en-us/udon-analyzer/overview/",
     likes: 77,
+  },
+  {
+    title: "Udon Obfuscator",
+    description: {
+      en: "Udon Obfuscator is source-code obfuscator that optimized for VRChat UdonSharp.",
+      ja: "Udon Obfuscator は VRChat UdonSharp に最適化されたソースコードの難読化ツールです",
+    },
+    url: "https://docs-preview.natsuneko.cat/en-us/udon-obfuscator/overview/",
+    likes: 0,
   },
   {
     title: "Particle Live Toolkit - Algo Patcher",
@@ -329,6 +348,14 @@ const WEB_SERVICES: WebService[] = [
       ja: "AssetExplorer opens the door to a world of Unity packages and assets, where you can effortlessly uncover, search, and delve into a wealth of resources, enabling you to take your Unity projects to new heights with ease and efficiency.",
     },
     url: "https://assetexplorer.natsuneko.cat",
+  },
+  {
+    title: "Unity Changesets",
+    description: {
+      en: "Search and Copy Unity Changesets",
+      ja: "Search and Copy Unity Changesets",
+    },
+    url: "https://unity-changeset.natsuneko.com/",
   },
 ];
 
